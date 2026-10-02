@@ -1,10 +1,3 @@
-/*
- * Exercise 6: Monte Carlo Pi, collecting results with MPI_Send / MPI_Recv
- * using MPI_ANY_SOURCE on the receive side (instead of MPI_Reduce).
- *
- * Compile: mpicc -O2 -o ex6_pi_anysource ex6_pi_anysource.c -lm
- * Run:     mpirun -np 4 ./ex6_pi_anysource
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
