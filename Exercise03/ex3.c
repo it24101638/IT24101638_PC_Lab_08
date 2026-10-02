@@ -1,13 +1,3 @@
-/*
- * Monte Carlo estimation of Pi using MPI
- *
- * Idea: throw random points into the unit square [0,1) x [0,1).
- * Fraction landing inside the quarter circle (x^2 + y^2 <= 1) ~ Pi/4.
- *
- * Compile: mpicc -O2 -o mpi_pi mpi_pi.c
- * Run:     mpirun -np 4 ./mpi_pi            (10,000,000 points)
- *          mpirun -np 4 ./mpi_pi 50000000   (custom total)
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
