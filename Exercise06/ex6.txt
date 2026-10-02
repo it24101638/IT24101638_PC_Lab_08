@@ -1,0 +1,62 @@
+Results:
+
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ mpicc -O2 -o ex3 ex3.c -lm
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ mpicc -O2 -o ex6 ex6.c -lm
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ mpirun -np 4 ./ex3
+Processes      : 4
+Total points   : 10000000
+Points in circle: 7855525
+Estimated Pi   : 3.14221000
+Actual Pi      : 3.14159265
+Error          : 0.00061735
+Time (max rank): 0.011336 s
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ mpirun -np 4 ./ex6
+Processes      : 4
+Total points   : 10000000
+Points in circle: 7855525
+Estimated Pi   : 3.14221000
+Actual Pi      : 3.14159265
+Error          : 0.00061735
+Time (max rank): 0.011386 s
+Arrival order  : 1 2 3
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ mpirun -np 4 ./ex6
+Processes      : 4
+Total points   : 10000000
+Points in circle: 7855525
+Estimated Pi   : 3.14221000
+Actual Pi      : 3.14159265
+Error          : 0.00061735
+Time (max rank): 0.011364 s
+Arrival order  : 3 2 1
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ mpirun -np 4 ./ex6
+Processes      : 4
+Total points   : 10000000
+Points in circle: 7855525
+Estimated Pi   : 3.14221000
+Actual Pi      : 3.14159265
+Error          : 0.00061735
+Time (max rank): 0.011078 s
+Arrival order  : 1 3 2
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ mpirun -np 4 ./ex6
+Processes      : 4
+Total points   : 10000000
+Points in circle: 7855525
+Estimated Pi   : 3.14221000
+Actual Pi      : 3.14159265
+Error          : 0.00061735
+Time (max rank): 0.012720 s
+Arrival order  : 2 3 1
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ mpirun -np 4 ./ex6
+Processes      : 4
+Total points   : 10000000
+Points in circle: 7855525
+Estimated Pi   : 3.14221000
+Actual Pi      : 3.14159265
+Error          : 0.00061735
+Time (max rank): 0.011972 s
+Arrival order  : 2 3 1
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise06$ 
+
+
+Explanation:
+MPI_ANY_SOURCE doesn't change the answer here, because the sum is order-independent. It only changes the order of the receives, and rank 0 no longer waits on a slow rank 1 while rank 2 has already finished. With only a few processes the time difference is within noise.
