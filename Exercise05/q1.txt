@@ -1,0 +1,9 @@
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise05$ mpirun -np 4 ./mismatch
+Just a normal process From rank 0 machine DESKTOP-41LNESG
+Rank 3: waiting for a message from rank 2...
+SEnding message to computer 3 from computer 1
+Just a normal process From rank 2 machine DESKTOP-41LNESG
+^CThenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise05$ 
+
+Explanation:
+The program never ends because rank 1 sends to rank 3, but rank 3 now waits for a message from rank 2, and nobody sends from rank 2.

@@ -1,0 +1,6 @@
+Thenul@DESKTOP-41LNESG:/mnt/d/Academics/Y3S1/Parallel_Computing/Labs/Lab8/IT24101638_PC_Lab_08/Exercise05$ mpirun -np 4 ./bsend
+Just a normal process From rank 0 machine DESKTOP-41LNESG
+BSending message to computer 3 from computer 1
+in computer 3 the value of y is printed
+ 0  10  20  30  40  50  60  70  80  90 
+Just a normal process From rank 2 machine DESKTOP-41LNESG
